@@ -1,0 +1,92 @@
+.calendar-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 15px 0;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .year {
+        font-weight: 800;
+        padding: 5px 10px;
+        width: 50%;
+    }
+
+    .arrows {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        font-size: 20px;
+        i {
+            cursor: pointer;
+            margin: 0 10px;
+            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+            &:hover {
+                transform: scale(0.9);
+                color: var(--palette-passionate-raspberry);
+            }
+
+            &.disabled{
+                cursor: not-allowed;
+                pointer-events: none;
+                color: var(--ol-border-color);
+            }
+        }
+    }
+
+    ul.months {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        li {
+            width: calc((100% / 12) - 5px);
+            height: 50px;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: box-shadow 0.3s ease-in-out;
+
+            &.active {
+                font-weight: 800 !important;
+                box-shadow: 2px 2px 5px 0px rgba(#cc3262, 0.4);
+            }
+
+            &:hover {
+                box-shadow: 2px 2px 5px 0px rgba(#cc3262, 0.4);
+            }
+
+            &.active::after {
+                content: "";
+                display: block;
+                position: absolute;
+                z-index: 1;
+                width: 8px;
+                height: 8px;
+                background-color: var(--palette-passionate-raspberry);
+                left: 50%;
+                bottom: -4px;
+                transform: translateX(-50%);
+                border-radius: 25px;
+            }
+
+            &.disabled{
+                cursor: not-allowed;
+                user-select: none;
+                pointer-events: none;
+                background-color: var(--ol-border-color);
+                color: var(--ol-fourth-color);
+            }
+            &.disabled:hover{
+                cursor: not-allowed;
+            }
+        }
+    }
+}

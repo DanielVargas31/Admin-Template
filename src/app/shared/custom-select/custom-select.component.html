@@ -1,0 +1,16 @@
+<div class="ol-custom-select">
+    <div class="ol-form-input" [ngClass]="{'active': hasValue}">
+        <span [ngClass]="customIcon" class="form-icon"></span>
+        <label class="title" for="areas" >{{title}}</label>
+        <div class="selected-option">{{value.value}}</div>
+        <div class="arrow-select">
+           <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="selector-template" #buttonSelect (click)="activateSelect()"></div>
+    </div>
+    <ul #selectionArea class="ol-custom-list" [ngClass]="{'active': isActive}">
+        <li (click)="selectItem(i)" *ngFor="let item of dataOptions;let i = index">
+            {{item.value}}
+        </li>
+    </ul>
+</div>

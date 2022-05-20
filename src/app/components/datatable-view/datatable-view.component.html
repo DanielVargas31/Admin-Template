@@ -1,0 +1,9 @@
+<master-content placeholder="header" class="page-title text-animation">
+    Datatable 
+</master-content>
+<master-content placeholder="main">
+    <ol-datatable [JSONdata]="JSONdata" [dataValues]="dataValues" [itemsPerPage]="$any(15)" keyValue="interactionId"
+        paginatePosition="bottom" [filter]="true">
+    </ol-datatable>
+</master-content>
+

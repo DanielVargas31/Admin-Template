@@ -1,0 +1,78 @@
+.stats-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    border-top: 1px solid var(--ol-border-color);
+
+    .slot {
+        padding: 10px 15px;
+        -webkit-animation-name: fadeIn;
+        animation-name: fadeIn;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+
+        .title {
+            font-size: 1.5vw;
+            font-weight: 600;
+            min-height: 90px;
+            display: flex;
+            align-items: center;
+            color: var(--ol-tertiary-color);
+        }
+        .number {
+            font-size: 5vw;
+            font-weight: 800;
+            color: var(--ol-text-color);
+            padding-left: 5px;
+        }
+
+        .ol-card {
+            min-height: 200px;
+            padding: 15px 20px;
+            overflow: hidden;
+
+
+            &.inverted {
+                background-color: var(--ol-primary-color);
+                .title {
+                    color: var(--ol-secondary-color) !important;
+                    font-weight: 800;
+                }
+                .number {
+                    color: var(--ol-body-bg) !important;
+                }
+            }
+        }
+    }
+
+    .slot-stat {
+        width: calc(100% / 4);
+    }
+
+    .slot-chart-pie {
+        width: 50%;
+
+        .chart-container {
+            margin: 0 auto;
+            max-width: 350px;
+            min-width: 200px;
+        }
+    }
+
+    .slot-chart {
+        width: 50%;
+
+        .chart-container {
+            margin: 0 auto;
+        }
+    }
+}
+
+@for $i from 1 through 10 {
+    .stats-container .slot:nth-child(#{$i}n) {
+        animation-delay: #{$i * 0.2}s;
+    }
+}

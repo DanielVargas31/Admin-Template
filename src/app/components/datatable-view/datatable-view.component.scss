@@ -1,0 +1,9 @@
+.fixed-content{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.info-content, .evaluation-content, .tipification-content{
+    padding: 10px;
+}

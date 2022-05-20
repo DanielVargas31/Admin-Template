@@ -1,0 +1,38 @@
+<master-content placeholder="header" class="page-title text-animation">
+    Configuración
+</master-content>
+<master-content placeholder="main" class="menu-selection">
+    <div class="ol-card" [routerLink]="['/users']">
+        <div class="icon">
+            <i class="fas fa-users"></i>
+        </div>
+        <div class="sub-title">
+            <p>Usuarios</p>
+        </div>
+        <div class="description">
+            <p>Aquí podrás gestionar toda la información de los usuarios del sistema.</p>
+        </div>
+    </div>
+    <div class="ol-card" [routerLink]="['/masters']">
+        <div class="icon">
+            <i class="fas fa-th-list"></i>
+        </div>
+        <div class="sub-title">
+            <p>Sub-Menus</p>
+        </div>
+        <div class="description">
+            <p>Administra sub-menus</p>
+        </div>
+    </div>
+    <div class="ol-card" [routerLink]="['/system']">
+        <div class="icon">
+            <i class="fas fa-cog"></i>
+        </div>
+        <div class="sub-title">
+            <p>Configuración general</p>
+        </div>
+        <div class="description">
+            <p>Aquí podrás cambiar la configurción del sistema.</p>
+        </div>
+    </div>
+</master-content>

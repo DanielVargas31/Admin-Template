@@ -1,0 +1,53 @@
+.login-container {
+    width: 400px;
+    min-height: 50px;
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--ol-card-bg);
+    border-radius: var(--ol-card-radious);
+    box-shadow: var(--ol-box-shadow);
+    -webkit-box-shadow: var(--ol-webkit-box-shadow);
+    -moz-box-box-shadow: var(--ol-moz-box-shadow);
+    padding: 10px 5px 25px 5px;
+
+    .title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        font-weight: 800;
+        height: 80px;
+        color: var(--ol-fourth-color);
+
+        img{
+            width: 200px;
+        }
+    }
+
+    .ms-button {
+        width: 100%;
+
+        button {
+            display: flex;
+            align-items: center;
+            padding: 0 12px;
+            height: 41px;
+            font-family: 'Segoe UI Regular', sans-serif !important;
+            
+            font-size: 15px;
+            font-weight: 600;
+            color: #5e5e5e;
+            background: #ffffff;
+            border: 1px solid #8c8c8c;
+            margin: 0 auto;
+            
+
+            img{
+                margin-right: 12px;
+            }
+        }
+    }
+}

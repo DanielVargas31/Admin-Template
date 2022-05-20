@@ -1,0 +1,80 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon/icomoon.eot?v6r87z');
+  src:  url('../fonts/icomoon/icomoon.eot?v6r87z#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon/icomoon.ttf?v6r87z') format('truetype'),
+    url('../fonts/icomoon/icomoon.woff?v6r87z') format('woff'),
+    url('../fonts/icomoon/icomoon.svg?v6r87z#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Contact:before {
+  content: "\e90a";
+}
+.icon-Numpad:before {
+  content: "\e90b";
+}
+.icon-Contestar-colgar:before {
+  content: "\e900";
+}
+.icon-Contrasea:before {
+  content: "\e901";
+}
+.icon-Hora-llamada:before {
+  content: "\e902";
+}
+.icon-Idioma:before {
+  content: "\e903";
+}
+.icon-Login:before {
+  content: "\e904";
+}
+.icon-Logout:before {
+  content: "\e905";
+}
+.icon-No-Id:before {
+  content: "\e906";
+}
+.icon-Pas:before {
+  content: "\e907";
+}
+.icon-Reanudar:before {
+  content: "\e908";
+}
+.icon-Tiempo-hold:before {
+  content: "\e909";
+}
+.icon-Tiempo-llamada:before {
+  content: "\e90f";
+}
+.icon-Tipo-ID:before {
+  content: "\e910";
+}
+.icon-Transferir:before {
+  content: "\e911";
+}
+.icon-Usuario:before {
+  content: "\e912";
+}
+.icon-Break:before {
+  content: "\e913";
+}
+.icon-Conferencia:before {
+  content: "\e914";
+}

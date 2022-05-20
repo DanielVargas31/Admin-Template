@@ -1,0 +1,38 @@
+ <master-content placeholder="header" class="page-title text-animation">
+    Sub-Menus
+</master-content>
+<master-content placeholder="main" class="menu-selection">
+    <div class="ol-card" (click)="openModalWithComponent(components.responsabilities, 'Crud')">
+        <div class="icon">
+            <i class="fas fa-network-wired"></i>
+        </div>
+        <div class="sub-title">
+            <p>Sub-Menu-Crud</p>
+        </div>
+        <div class="description">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    </div>
+    <div class="ol-card" (click)="openModalWithComponent(components.reasons, 'Modal Content')">
+        <div class="icon">
+            <i class="fas fa-comment"></i>
+        </div>
+        <div class="sub-title">
+            <p>Sub-Menu</p>
+        </div>
+        <div class="description">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis sequi asperiores est rem, reiciendis odio?</p>
+        </div>
+    </div>
+    <div class="ol-card" (click)="openModalWithComponent(components.subreasons, 'Modal Table')">
+        <div class="icon">
+            <i class="fas fa-comments"></i>
+        </div>
+        <div class="sub-title">
+            <p>Sub-Menu-Table</p>
+        </div>
+        <div class="description">
+            <p>Sub-motivos asociados a un motivo.</p>
+        </div>
+    </div>
+</master-content>

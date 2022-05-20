@@ -1,0 +1,18 @@
+<div class="ol-custom-select">
+    <div class="ol-form-input" [ngClass]="{'active': hasValue}">
+        <span [ngClass]="customIcon" class="form-icon"></span>
+        <!-- <label class="title" for="areas" >{{title}}</label> -->
+        <input #inputSearchBar class="search-bar" type="text" *ngIf="isActive"
+            [placeholder]="isActive ? 'Buscar' : title">
+        <div class="selected-option" *ngIf="!isActive">{{value.value == '' ? title : value.value}}</div>
+        <div class="arrow-select">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="selector-template" #buttonSelect (click)="activateSelect()"></div>
+    </div>
+    <ul #selectionArea class="ol-custom-list" [ngClass]="{'active': isActive}">
+        <li (click)="selectItem(item.key)" *ngFor="let item of dataOptions | customFilter: 'value' : (inputSearchBar != undefined ? inputSearchBar.nativeElement.value : null ) ;let i = index">
+            {{item.value}}
+        </li>
+    </ul>
+</div>

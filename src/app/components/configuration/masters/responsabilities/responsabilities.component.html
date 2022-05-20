@@ -1,0 +1,19 @@
+<div class="modal-header">
+    <h4 class="modal-title pull-left">{{title}}</h4>&nbsp;<p class="sub-title">Subtitle</p>
+    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <div class="view-data">
+        <ol-datatable [JSONdata]="JSONdata" [dataValues]="dataValues" [itemsPerPage]="$any(3)"
+            keyValue="responsabilityId" paginatePosition='bottom' [filter]="true">
+        </ol-datatable>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-action">
+        <span class="fas fa-plus"></span>
+        Nuevo
+    </button>
+</div>

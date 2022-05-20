@@ -1,0 +1,13 @@
+<div class="calendar-container">
+    <h3 class="year">{{dateSelected.getFullYear()}}</h3>
+    <span class="arrows">
+        <i class="fas fa-chevron-left" (click)="lastMonth()"></i>
+        <i class="fas fa-chevron-right" (click)="nextMonth()" [ngClass]="{'disabled': !validateNext()}"></i>
+    </span>
+    <ul class="months">
+        <li *ngFor="let item of JSONMonths; let i=index;" class="ol-card" 
+        [ngClass]="{'active': activeMonth == i, 'disabled' : i >= monthDisabled && dateSelected.getFullYear() >= today.getFullYear() }" (click)="selectMonth(i)">
+            <p>{{item.name}}</p>
+        </li>
+    </ul>
+</div>

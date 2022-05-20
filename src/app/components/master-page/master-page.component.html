@@ -1,0 +1,57 @@
+<div class="master-content">
+    <div class="main-menu">
+
+        <div class="menu-container">
+            <div class="menu-header">
+                <p>Administrador</p>
+            </div>
+            <div class="menu">
+                <ul class="menu-items">
+                    <li *ngFor="let items of menuArray; index as i;" class="item" (click)="onRouteClick(i)"
+                        [ngClass]="{'active': i == activeIndex}">
+                        <div class="menu-icon">
+                            <i class="fas" [class]="items.icon"></i>
+                        </div>
+                        <p class="menu-name">{{items.moduleName}}</p>
+                    </li>
+                    <hr>
+                    <li (click)="onLogout()" class="item">
+                        <div class="menu-icon">
+                            <i class="fas fa-sign-out-alt"></i>
+                        </div>
+                        <p class="menu-name">Cerrar sesión</p>
+                    </li>
+                </ul>
+                <div class="menu-selector-workspace" [ngStyle]="{'height': menuHeight}">
+                    <div class="menu-selector" [ngStyle]="{'top': activeMenulength}">
+                        <img class="wave-svg" src="assets/images/wave.svg">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    <div class="main-content">
+        <master-placeholder name="header"></master-placeholder>
+        <master-placeholder name="main"></master-placeholder>
+    </div>
+    <div class="user-content">
+
+        <div class="avatar-content" [popover]="popTemplate" placement="left" container="body"
+            triggers="mouseenter:mouseleave">
+            <div class="avatar-circle">
+                <div class="avatar">
+                    <img [attr.src]="profilePicture">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-template #popTemplate>
+    <h3 class="welcome">Hola!</h3>
+    <p class="name">Name</p>
+    <p class="username">email@webhelp.com</p>
+</ng-template>
+<router-outlet name="master"></router-outlet>

@@ -1,0 +1,55 @@
+<master-content placeholder="main">
+    <calendar class="text-animation" [(ngModel)]="calendarValue" (valueChange)="updateChanges()"></calendar>
+    <div class="stats-container">
+        <div class="slot slot-stat">
+            <div class="ol-card no-select inverted">
+                <div class="title">
+                    <p>Card Title</p>
+                </div>
+                <div class="number">
+                    Body
+                </div>
+            </div>
+        </div>
+        <div class="slot slot-stat">
+            <div class="ol-card no-select">
+                <div class="title">
+                    <p>Card Title</p>
+                </div>
+                <div class="number">
+                    Body
+                </div>
+            </div>
+        </div>
+        <div class="slot slot-stat">
+            <div class="ol-card no-select inverted">
+                <div class="title">
+                    <p>Card Title</p>
+                </div>
+                <div class="number">
+                    Body
+                </div>
+            </div>
+        </div>
+        <div class="slot slot-stat">
+            <div class="ol-card no-select">
+                <div class="title">
+                    <p>Card Title</p>
+                </div>
+                <div class="number">
+                    Body
+                </div>
+            </div>
+        </div>
+        <div class="slot slot-chart">
+            <div class="chart-container">
+                <canvas #statesChart width="600" height="300"></canvas>
+            </div>
+        </div>
+        <div class="slot slot-chart-pie">
+            <div class="chart-container">
+                <canvas #chanelsChart width="200" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+</master-content>
