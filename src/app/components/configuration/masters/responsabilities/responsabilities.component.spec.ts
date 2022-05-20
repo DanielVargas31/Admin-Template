@@ -1,7 +1,6 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { BsModalRef } from 'ngx-bootstrap/modal';
-import { MasterService } from 'src/app/api-services/master.service';
 
 import { ResponsabilitiesComponent } from './responsabilities.component';
 
@@ -16,8 +15,7 @@ describe('ResponsabilitiesComponent', () => {
       ],
       declarations: [ ResponsabilitiesComponent ],
       providers:[
-        BsModalRef,
-        MasterService
+        BsModalRef
       ]
     })
     .compileComponents();

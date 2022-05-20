@@ -11,7 +11,6 @@ import {
 import { Observable, throwError, BehaviorSubject } from 'rxjs';
 import { map, catchError, finalize } from 'rxjs/operators';
 import { LoaderService } from '../services/loader.service';
-import { UsersService } from '../api-services/users.service';
 import Dialogtype, { Dialog } from '../libs/dialog.lib';
 
 @Injectable({
@@ -27,7 +26,6 @@ export class HttpConfigInterceptor implements HttpInterceptor {
 
     constructor(
         public loaderService: LoaderService,
-        private userService: UsersService
     ) { }
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {

@@ -1,8 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterModule } from '@angular/router';
-import { MsalBroadcastService, MsalService, MSAL_INSTANCE } from '@azure/msal-angular';
-import { MSALInstanceFactory } from 'src/app/app.module';
-
 import { MasterPageComponent } from './master-page.component';
 
 describe('MasterPageComponent', () => {
@@ -16,12 +13,6 @@ describe('MasterPageComponent', () => {
       ],
       declarations: [ MasterPageComponent ],
       providers:[
-        MsalService,
-        MsalBroadcastService,
-        {
-          provide: MSAL_INSTANCE,
-          useFactory: MSALInstanceFactory
-        },
       ]
     })
     .compileComponents();

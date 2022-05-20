@@ -1,10 +1,8 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterModule } from '@angular/router';
-import { MsalBroadcastService, MsalService, MSAL_GUARD_CONFIG, MSAL_INSTANCE } from '@azure/msal-angular';
 import { ModulesService } from 'src/app/api-services/modules.service';
-import { UsersService } from 'src/app/api-services/users.service';
-import { MSALGuardConfigFactory, MSALInstanceFactory } from 'src/app/app.module';
+
 
 import { LoginComponent } from './login.component';
 
@@ -20,18 +18,7 @@ describe('LoginComponent', () => {
       ],
       declarations: [ LoginComponent ],
       providers:[
-        MsalService,
-        MsalBroadcastService,
-        UsersService,
-        ModulesService,
-        {
-          provide: MSAL_GUARD_CONFIG,
-          useFactory: MSALGuardConfigFactory
-        },
-        {
-          provide: MSAL_INSTANCE,
-          useFactory: MSALInstanceFactory
-        },
+        ModulesService
       ]
     })
     .compileComponents();

@@ -1,7 +1,6 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { BsModalRef } from 'ngx-bootstrap/modal';
-import { MasterService } from 'src/app/api-services/master.service';
 
 import { SubReasonsComponent } from './sub-reasons.component';
 
@@ -17,8 +16,6 @@ describe('SubReasonsComponent', () => {
       declarations: [SubReasonsComponent],
       providers: [
         BsModalRef,
-        MasterService,
-        DialogService
       ]
     })
       .compileComponents();

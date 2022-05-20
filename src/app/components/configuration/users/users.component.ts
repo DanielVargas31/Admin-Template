@@ -1,6 +1,4 @@
 import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { UsersService } from 'src/app/api-services/users.service';
 import { User } from 'src/app/models/user';
 import { DatatableDataValues } from 'src/app/shared/datatable/datatable.component';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
@@ -16,18 +14,7 @@ import { States } from 'src/app/models/drop-down';
 export class UsersComponent implements OnInit {
 
   @ViewChild('actionsTemplate', { static: true }) actionsTemplate: TemplateRef<any> = {} as TemplateRef<any>;
-  filterForm = new FormGroup({
-    userName: new FormControl(''),
-    fullName: new FormControl(''),
-  });
 
-  userForm = new FormGroup({
-    userId: new FormControl(null),
-    fullName: new FormControl('', [Validators.required]),
-    userName: new FormControl('', [Validators.required, Validators.email]),
-    roleId: new FormControl('', [Validators.required]),
-    state: new FormControl('true')
-  });
 
   states: Array<States> = [
     { key: true, value: 'Activo' },
@@ -35,7 +22,6 @@ export class UsersComponent implements OnInit {
   ]
 
   dataValues: Array<DatatableDataValues> = [];
-  dataRoles: Array<Roles> = [];
   JSONdata: Array<User> = [];
   onEdit: boolean = false;
   modalTitle: string = '';

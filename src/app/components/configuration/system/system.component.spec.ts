@@ -1,8 +1,6 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { BsModalService } from 'ngx-bootstrap/modal';
-import { SettingService } from 'src/app/api-services/setting.service';
-
 import { SystemComponent } from './system.component';
 
 describe('SystemComponent', () => {
@@ -16,9 +14,7 @@ describe('SystemComponent', () => {
       ],
       declarations: [SystemComponent],
       providers: [
-        SettingService,
-        BsModalService,
-        DialogService
+        BsModalService
       ]
     })
       .compileComponents();

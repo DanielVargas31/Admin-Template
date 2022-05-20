@@ -1,8 +1,5 @@
-import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit} from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal';
-import { Reasons } from 'src/app/models/reasons';
-import { Responsabilities } from 'src/app/models/responsabilities';
 import { DatatableDataValues } from 'src/app/shared/datatable/datatable.component';
 
 @Component({

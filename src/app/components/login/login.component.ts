@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subject } from 'rxjs';
-import { UsersService } from 'src/app/api-services/users.service';
 import { ModulesService } from 'src/app/api-services/modules.service';
 import { Login } from 'src/app/models/user';
 
@@ -21,7 +20,6 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private userAPIService: UsersService,
     private modulesService: ModulesService
   ) {
 

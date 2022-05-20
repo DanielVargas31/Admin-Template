@@ -1,5 +1,4 @@
 import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
-import { Settings } from 'src/app/models/settings';
 import { DatatableDataValues } from 'src/app/shared/datatable/datatable.component';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
@@ -15,7 +14,7 @@ export class SystemComponent implements OnInit {
 
   public bsConfig: Partial<BsDatepickerConfig> = new BsDatepickerConfig();
   dataValues: Array<DatatableDataValues> = [];
-  JSONdata: Array<Settings> = [];
+  JSONdata: Array<any> = [];
   modalTitle: string = '';
   modalRef?: BsModalRef;
   modalConfig = {
