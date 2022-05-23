@@ -33,9 +33,9 @@
                 text-align: center;
                 font-size: 22px;
                 font-weight: bold;
-                color: var(--ol-fourth-color);
+                color: var(--palette-passionate-raspberry);
                 height: 110px;
-                padding: 10px 25px;
+                padding: 20px 25px;
             }
 
             .menu {
@@ -61,7 +61,7 @@
                         cursor: pointer;
                         user-select: none;
 
-                        .menu-icon {   
+                        .menu-icon {
                             width: 40px;
                             margin-right: 5px;
                             font-size: 20px;
@@ -69,7 +69,7 @@
                             text-align: center;
                             transition: color 0.5s ease-in-out;
 
-                            i{
+                            i {
                                 transition: transform 0.3s ease-in-out;
                             }
                         }
@@ -88,8 +88,8 @@
                             }
                         }
 
-                        &:hover{
-                            .menu-icon i{
+                        &:hover {
+                            .menu-icon i {
                                 transform: scale(0.8);
                             }
                         }
@@ -182,11 +182,11 @@
                     position: relative;
                     overflow: hidden;
 
-                    img{
+                    img {
                         width: 100%;
                     }
 
-                    i{
+                    i {
                         position: absolute;
                         bottom: -2px;
                         left: 50%;
@@ -200,17 +200,17 @@
     }
 }
 
-.welcome{
+.welcome {
     color: var(--ol-text-color);
     border-bottom: 1px solid var(--ol-border-color);
 }
-.name{
+.name {
     font-size: 16px;
     font-weight: 600;
     color: var(--ol-text-color);
 }
 
-.username{
+.username {
     font-size: 12px;
     color: var(--ol-tertiary-color);
 }
